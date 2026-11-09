@@ -25,7 +25,8 @@ You need Python 3.10+ and Node 18+.
 cd backend
 python -m venv .venv && source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-python manage.py makemigrations accounts inventory        # creates the migration files: commit them
+# Migrations are included; run makemigrations only after changing models.
+# python manage.py makemigrations accounts inventory
 python manage.py migrate
 python manage.py test                                     # runs all backend tests
 python manage.py seed_demo --org "DIU Campus Supershop" \
